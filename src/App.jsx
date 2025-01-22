@@ -61,7 +61,7 @@ function App() {
 	const showButtons = shuffeldNumbersRange.length
 
 	return (
-		<main className='mx-auto space-y-4 max-w-screen-sm py-2 sm:py-4 px-1 sm:px-0'>
+		<main className='mx-auto space-y-3 sm:space-y-4 max-w-screen-sm py-2 sm:py-4 px-1 sm:px-0'>
 			<h1 className='text-center font-bold text-xl'>BINGO 90</h1>
 			{showButtons ? (
 				<div className='flex items-center justify-center gap-4'>
