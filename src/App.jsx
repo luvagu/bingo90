@@ -61,7 +61,7 @@ function App() {
 	const showButtons = shuffeldNumbersRange.length
 
 	return (
-		<main className='container mx-auto space-y-4 max-w-screen-sm'>
+		<main className='mx-auto space-y-4 max-w-screen-sm py-2 sm:py-4 px-1 sm:px-0'>
 			<h1 className='text-center font-bold text-xl'>BINGO 90</h1>
 			{showButtons ? (
 				<div className='flex items-center justify-center gap-4'>
@@ -98,15 +98,23 @@ function App() {
 				</button>
 			)}
 
-			<div className='grid grid-cols-[repeat(20,_minmax(0,_1fr))] rounded border border-gray-400 gap-1 divide-x divide-solid divide-gray-400 min-h-[18px]'>
-				{poppedNumbersHistory.slice(-20).map(num => (
-					<div key={num} className='text-xs text-center'>
+			<div className='sm:hidden grid grid-cols-[repeat(14,_minmax(0,_1fr))] rounded border border-gray-400 gap-1 divide-x divide-solid divide-gray-400 min-h-[22px]'>
+				{poppedNumbersHistory.slice(-14).map(num => (
+					<div key={num} className='text-sm text-center'>
 						{num}
 					</div>
 				))}
 			</div>
 
-			<div className='grid grid-cols-10 gap-2 justify-items-center'>
+			<div className='hidden sm:grid grid-cols-[repeat(20,_minmax(0,_1fr))] rounded border border-gray-400 gap-1 divide-x divide-solid divide-gray-400 min-h-[22px]'>
+				{poppedNumbersHistory.slice(-20).map(num => (
+					<div key={num} className='text-sm text-center'>
+						{num}
+					</div>
+				))}
+			</div>
+
+			<div className='grid grid-cols-8 sm:grid-cols-10 gap-2 justify-items-center'>
 				{Array(BINGO_SIZE)
 					.fill()
 					.map((_, index) => {
