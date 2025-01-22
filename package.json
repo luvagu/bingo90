@@ -6,11 +6,11 @@
 	"homepage": "https://luvagu.github.io/bingo90/",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build --base=./",
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
